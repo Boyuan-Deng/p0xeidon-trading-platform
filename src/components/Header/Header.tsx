@@ -101,10 +101,10 @@ export function Header({
       <header>
         <div className="App-header large">
           <div className="App-header-container-left">
-            <Link className="App-header-link-main" to="/">
+            {/* <Link className="App-header-link-main" to="/">
               <img src={logoImg} className="big" alt="GMX Logo" />
               <img src={logoSmallImg} className="small" alt="GMX Logo" />
-            </Link>
+            </Link> */}
             <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
           </div>
           <div className="App-header-container-right">
@@ -132,10 +132,10 @@ export function Header({
                 {!isDrawerVisible && <RiMenuLine className="App-header-menu-icon" />}
                 {isDrawerVisible && <FaTimes className="App-header-menu-icon" />}
               </div>
-              <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
+              {/* <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
                 <img src={logoImg} className="big" alt="GMX Logo" />
                 <img src={logoSmallImg} className="small" alt="GMX Logo" />
-              </div>
+              </div> */}
             </div>
             <div className="App-header-container-right">
               <AppHeaderUser

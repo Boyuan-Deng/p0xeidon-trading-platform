@@ -48,7 +48,15 @@ export default function TokenSelector(props) {
     return null;
   }
 
-  const tokenImage = importImage(`ic_${tokenInfo.symbol.toLowerCase()}_24.svg`);
+  let tokenImage;
+  if (tokenInfo.symbol === "tkETH") {
+    tokenImage = importImage(`icon-eth.svg`);
+  } else if (tokenInfo.symbol === "tkUSDC") {
+    tokenImage = importImage(`ic_usdc_24.svg`);
+  } else {
+    tokenImage = importImage(`ic_${tokenInfo.symbol.toLowerCase()}_24.svg`);
+  }
+  // const tokenImage = importImage(`ic_${tokenInfo.symbol.toLowerCase()}_24.svg`);
 
   const onSearchKeywordChange = (e) => {
     setSearchKeyword(e.target.value);
@@ -87,12 +95,13 @@ export default function TokenSelector(props) {
             />
           </div>
           {filteredTokens.map((token, tokenIndex) => {
-            let tokenPopupImage = importImage(`ic_${token.symbol.toLowerCase()}_40.svg`);
+            let tokenPopupImage;
             if (token.symbol === "tkETH") {
               tokenPopupImage = importImage(`icon-eth.svg`);
-            }
-            if (token.symbol === "tkUSDC") {
+            } else if (token.symbol === "tkUSDC") {
               tokenPopupImage = importImage(`ic_usdc_40.svg`);
+            } else {
+              tokenPopupImage = importImage(`ic_${token.symbol.toLowerCase()}_40.svg`);
             }
             let info = infoTokens ? infoTokens[token.address] : {};
             let mintAmount;

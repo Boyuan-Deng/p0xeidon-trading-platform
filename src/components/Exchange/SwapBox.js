@@ -1647,8 +1647,16 @@ export default function SwapBox(props) {
   }
 
   const onClickPrimary = () => {
-    console.log(eth, fromValue, eth - parseFloat(fromValue));
-    setEth(eth - parseFloat(fromValue));
+    const token = getToken(chainId, fromTokenAddress);
+    if (token.symbol === "USDC") {
+      setUsdc(usdc - parseFloat(fromValue));
+    } else if (token.symbol === "ETH") {
+      setEth(eth - parseFloat(fromValue));
+    } else if (token.symbol === "tkETH") {
+      setEth(eth + parseFloat(fromValue));
+    } else if (token.symbol === "tkUSDC") {
+      setUsdc(usdc + parseFloat(fromValue));
+    }
     setFromValue("");
     return;
     if (isStopOrder) {
