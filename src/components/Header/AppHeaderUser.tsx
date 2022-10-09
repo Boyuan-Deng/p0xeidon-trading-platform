@@ -88,7 +88,7 @@ export function AppHeaderUser({
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
           >
-            <Trans>Trade</Trans>
+            <Trans>ZK Trade</Trans>
           </HeaderLink>
         </div>
 
@@ -123,7 +123,7 @@ export function AppHeaderUser({
           redirectPopupTimestamp={redirectPopupTimestamp}
           showRedirectModal={showRedirectModal}
         >
-          <Trans>Trade</Trans>
+          <Trans>ZK Trade</Trans>
         </HeaderLink>
       </div>
 

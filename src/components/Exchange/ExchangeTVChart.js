@@ -345,14 +345,6 @@ export default function ExchangeTVChart(props) {
 
     return (
       <div className={className}>
-        <span className="ExchangeChart-bottom-stats-label">O</span>
-        <span className="ExchangeChart-bottom-stats-value">{candlestick.open.toFixed(toFixedNumbers)}</span>
-        <span className="ExchangeChart-bottom-stats-label">H</span>
-        <span className="ExchangeChart-bottom-stats-value">{candlestick.high.toFixed(toFixedNumbers)}</span>
-        <span className="ExchangeChart-bottom-stats-label">L</span>
-        <span className="ExchangeChart-bottom-stats-value">{candlestick.low.toFixed(toFixedNumbers)}</span>
-        <span className="ExchangeChart-bottom-stats-label">C</span>
-        <span className="ExchangeChart-bottom-stats-value">{candlestick.close.toFixed(toFixedNumbers)}</span>
       </div>
     );
   }, [hoveredCandlestick, priceData]);

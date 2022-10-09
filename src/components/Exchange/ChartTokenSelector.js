@@ -35,7 +35,7 @@ export default function ChartTokenSelector(props) {
     <Menu>
       <Menu.Button as="div" disabled={isSwap}>
         <button className={cx("App-cta small transparent chart-token-selector", { "default-cursor": isSwap })}>
-          <span className="chart-token-selector--current">zkETH / zkDAI</span>
+          <span className="chart-token-selector--current">zkETH / zkUSDC</span>
           {!isSwap && <FaChevronDown />}
         </button>
       </Menu.Button>
