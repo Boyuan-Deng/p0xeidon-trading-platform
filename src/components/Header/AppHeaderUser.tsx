@@ -12,7 +12,7 @@ import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
 import LanguagePopupHome from "../NetworkDropdown/LanguagePopupHome";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getChainName } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getChainName, TESTNET } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 
@@ -23,6 +23,10 @@ type Props = {
   disconnectAccountAndCloseSettings: () => void;
   redirectPopupTimestamp: number;
   showRedirectModal: (to: string) => void;
+  eth: number;
+  usdc: number;
+  setEth: (num: number) => void;
+  setUsdc: (num: number) => void;
 };
 
 export function AppHeaderUser({
@@ -32,6 +36,10 @@ export function AppHeaderUser({
   disconnectAccountAndCloseSettings,
   redirectPopupTimestamp,
   showRedirectModal,
+  eth,
+  usdc,
+  setEth,
+  setUsdc,
 }: Props) {
   const { chainId } = useChainId();
   const { active, account } = useWeb3React();
@@ -56,6 +64,12 @@ export function AppHeaderUser({
       label: getChainName(ARBITRUM_TESTNET),
       value: ARBITRUM_TESTNET,
       icon: "ic_arbitrum_24.svg",
+      color: "#264f79",
+    });
+    networkOptions.push({
+      label: getChainName(TESTNET),
+      value: TESTNET,
+      icon: "ic_bsc.svg",
       color: "#264f79",
     });
   }
@@ -134,6 +148,10 @@ export function AppHeaderUser({
               account={account}
               accountUrl={accountUrl}
               disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
+              eth={eth}
+              usdc={usdc}
+              setEth={setEth}
+              setUsdc={setUsdc}
             />
           </div>
           <NetworkDropdown

@@ -426,6 +426,9 @@ function FullApp() {
     };
   }, [active, chainId, vaultAddress, positionRouterAddress]);
 
+  const [eth, setEth] = useState(100.01);
+  const [usdc, setUsdc] = useState(17892.12);
+
   return (
     <>
       <div className="App">
@@ -436,6 +439,10 @@ function FullApp() {
             setWalletModalVisible={setWalletModalVisible}
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
+            eth={eth}
+            usdc={usdc}
+            setEth={setEth}
+            setUsdc={setUsdc}
           />
           {isHome && (
             <Switch>
@@ -471,6 +478,10 @@ function FullApp() {
                   setSavedShouldShowPositionLines={setSavedShouldShowPositionLines}
                   connectWallet={connectWallet}
                   savedShouldDisableValidationForTesting={savedShouldDisableValidationForTesting}
+                  eth={eth}
+                  usdc={usdc}
+                  setEth={setEth}
+                  setUsdc={setUsdc}
                 />
               </Route>
               <Route exact path="/dashboard">

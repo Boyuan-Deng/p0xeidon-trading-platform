@@ -19,18 +19,19 @@
 
 .menu-items {
   position: absolute;
-  right: 0;
+  right: -50px;
   top: 4.3rem;
   min-width: 15.5rem;
   width: 100%;
   transform-origin: top right;
   border-radius: 0.4rem;
-  background: #16182e;
-  border: 1px solid #32344c;
+  background: white;
+  border: 1px solid #bdc0c7;
   list-style: none;
   cursor: pointer;
   outline: none;
   z-index: 1000;
+  color: black;
 }
 .menu-item {
   display: flex !important;
@@ -67,4 +68,90 @@
   .user-avatar {
     display: none;
   }
+}
+
+.wallet-info-wrapper {
+  padding: 16px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  padding: 1rem 0;
+  border: 1px solid #bdc0c7;
+  position: relative;
+  font-weight: bold;
+}
+
+.disconnect-btn {
+  padding: 3rem 0 1.4rem;
+  color: #4291e0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.change-btn:hover {
+  background: #808aff14;
+}
+
+.change-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.4rem 0.8rem;
+  background: white;
+  border: 1px solid #4291e0;
+  color: #4291e0;
+  border-radius: 0.3rem;
+}
+
+.flex-address {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.flex-address-left {
+  text-align: center;
+  flex: 1;
+  border: 1px solid #bdc0c7;
+  padding: 1rem;
+  background: #f8f9fb;
+}
+
+.flex-address-right {
+  text-align: center;
+  flex: 1;
+  border: 1px solid #bdc0c7;
+  padding: 1rem;
+  background: #f8f9fb;
+}
+
+.asset-wrap {
+  border: 1px solid #dedfe5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.asset-item {
+  display: flex;
+}
+
+.asset-item > span:nth-child(2) {
+  margin-left: 1rem;
+  color: #636d82;
+}
+
+.asset-item > span:nth-child(3) {
+  margin-left: auto;
+  color: #636d82;
+}
+
+.copy-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }

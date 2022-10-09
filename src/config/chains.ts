@@ -17,6 +17,7 @@ export const SUPPORTED_CHAIN_IDS = [ARBITRUM, AVALANCHE];
 
 if (isDevelopment()) {
   SUPPORTED_CHAIN_IDS.push(ARBITRUM_TESTNET);
+  SUPPORTED_CHAIN_IDS.push(TESTNET);
 }
 
 export const IS_NETWORK_DISABLED = {

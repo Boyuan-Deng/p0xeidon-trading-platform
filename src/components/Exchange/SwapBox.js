@@ -163,6 +163,10 @@ export default function SwapBox(props) {
     minExecutionFee,
     minExecutionFeeUSD,
     minExecutionFeeErrorMessage,
+    eth,
+    usdc,
+    setEth,
+    setUsdc,
   } = props;
 
   const [fromValue, setFromValue] = useState("");
@@ -1643,6 +1647,10 @@ export default function SwapBox(props) {
   }
 
   const onClickPrimary = () => {
+    console.log(eth, fromValue, eth - parseFloat(fromValue));
+    setEth(eth - parseFloat(fromValue));
+    setFromValue("");
+    return;
     if (isStopOrder) {
       setOrderOption(MARKET);
       return;
@@ -2189,8 +2197,8 @@ export default function SwapBox(props) {
           </div>
         )}
         <div className="Exchange-swap-button-container">
-          <button className="App-cta Exchange-swap-button" onClick={onClickPrimary} disabled={!isPrimaryEnabled()}>
-            {getPrimaryText()}
+          <button className="App-cta Exchange-swap-button" onClick={onClickPrimary}>
+            Enter an amount
           </button>
         </div>
       </div>

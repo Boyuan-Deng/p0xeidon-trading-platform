@@ -34,6 +34,10 @@ type Props = {
   setWalletModalVisible: (visible: boolean) => void;
   redirectPopupTimestamp: number;
   showRedirectModal: (to: string) => void;
+  eth: number;
+  usdc: number;
+  setEth: (num: number) => void;
+  setUsdc: (num: number) => void;
 };
 
 export function Header({
@@ -42,6 +46,10 @@ export function Header({
   setWalletModalVisible,
   redirectPopupTimestamp,
   showRedirectModal,
+  eth,
+  usdc,
+  setEth,
+  setUsdc,
 }: Props) {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
   const [isNativeSelectorModalVisible, setIsNativeSelectorModalVisible] = useState(false);
@@ -106,6 +114,10 @@ export function Header({
               setWalletModalVisible={setWalletModalVisible}
               redirectPopupTimestamp={redirectPopupTimestamp}
               showRedirectModal={showRedirectModal}
+              eth={eth}
+              usdc={usdc}
+              setEth={setEth}
+              setUsdc={setUsdc}
             />
           </div>
         </div>
@@ -133,6 +145,10 @@ export function Header({
                 setWalletModalVisible={setWalletModalVisible}
                 redirectPopupTimestamp={redirectPopupTimestamp}
                 showRedirectModal={showRedirectModal}
+                eth={eth}
+                usdc={usdc}
+                setEth={setEth}
+                setUsdc={setUsdc}
               />
             </div>
           </div>

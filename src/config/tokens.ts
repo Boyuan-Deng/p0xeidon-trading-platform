@@ -68,8 +68,8 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png",
     },
     {
-      name: "Tether",
-      symbol: "USDT",
+      name: "TK USD coin",
+      symbol: "tkUSDC",
       decimals: 18,
       address: "0x55d398326f99059fF775485246999027B3197955",
       isStable: true,
@@ -146,8 +146,8 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     },
     // https://github.com/OffchainLabs/arbitrum/blob/950c2f91b2e951cd3764394e0a73eac3797aecf3/packages/arb-ts/src/lib/networks.ts#L65
     {
-      name: "Wrapped Ethereum",
-      symbol: "WETH",
+      name: "TK Ethereum",
+      symbol: "tkETH",
       decimals: 18,
       address: "0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681",
       isWrapped: true,
@@ -163,8 +163,8 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
     {
-      name: "Tether",
-      symbol: "USDT",
+      name: "TK USD coin",
+      symbol: "tkUSDC",
       decimals: 6,
       address: "0x818ED84bA1927945b631016e0d402Db50cE8865f",
       isStable: true,
@@ -182,8 +182,8 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
     },
     {
-      name: "Wrapped Ethereum",
-      symbol: "WETH",
+      name: "TK Ethereum",
+      symbol: "tkETH",
       decimals: 18,
       address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
       isWrapped: true,
@@ -225,8 +225,8 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
     {
-      name: "Tether",
-      symbol: "USDT",
+      name: "TK USD coin",
+      symbol: "tkUSDC",
       decimals: 6,
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       isStable: true,

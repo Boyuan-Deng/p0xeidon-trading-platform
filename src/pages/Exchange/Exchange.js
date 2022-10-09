@@ -362,6 +362,10 @@ export const Exchange = forwardRef((props, ref) => {
     setSavedShouldShowPositionLines,
     connectWallet,
     savedShouldDisableValidationForTesting,
+    eth,
+    usdc,
+    setEth,
+    setUsdc,
   } = props;
   const [showBanner, setShowBanner] = useLocalStorageSerializeKey("showBanner", true);
   const [bannerHidden, setBannerHidden] = useLocalStorageSerializeKey("bannerHidden", null);
@@ -811,7 +815,6 @@ export const Exchange = forwardRef((props, ref) => {
   const getListSection = () => {
     return (
       <div>
-
         {listSection === "Positions" && (
           <PositionsList
             positionsDataIsLoading={positionsDataIsLoading}
@@ -958,6 +961,10 @@ export const Exchange = forwardRef((props, ref) => {
             minExecutionFee={minExecutionFee}
             minExecutionFeeUSD={minExecutionFeeUSD}
             minExecutionFeeErrorMessage={minExecutionFeeErrorMessage}
+            eth={eth}
+            usdc={usdc}
+            setEth={setEth}
+            setUsdc={setUsdc}
           />
           <div className="Exchange-wallet-tokens">
             <div className="Exchange-wallet-tokens-content">

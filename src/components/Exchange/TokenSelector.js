@@ -87,7 +87,13 @@ export default function TokenSelector(props) {
             />
           </div>
           {filteredTokens.map((token, tokenIndex) => {
-            const tokenPopupImage = importImage(`ic_${token.symbol.toLowerCase()}_40.svg`);
+            let tokenPopupImage = importImage(`ic_${token.symbol.toLowerCase()}_40.svg`);
+            if (token.symbol === "tkETH") {
+              tokenPopupImage = importImage(`icon-eth.svg`);
+            }
+            if (token.symbol === "tkUSDC") {
+              tokenPopupImage = importImage(`ic_usdc_40.svg`);
+            }
             let info = infoTokens ? infoTokens[token.address] : {};
             let mintAmount;
             let balance = info.balance;
