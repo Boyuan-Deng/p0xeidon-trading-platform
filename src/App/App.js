@@ -426,7 +426,7 @@ function FullApp() {
     };
   }, [active, chainId, vaultAddress, positionRouterAddress]);
 
-  const [eth, setEth] = useState(100.01);
+  const [eth, setEth] = useState(20);
   const [usdc, setUsdc] = useState(17892.12);
 
   return (

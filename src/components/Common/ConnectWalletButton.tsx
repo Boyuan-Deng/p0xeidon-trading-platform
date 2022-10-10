@@ -14,7 +14,9 @@ export default function ConnectWalletButton({ imgSrc, children, onClick, classNa
   return (
     <button className={classNames} onClick={onClick}>
       {imgSrc && <img className="btn-image" src={imgSrc} alt="Connect Wallet" />}
-      <span className="btn-label">{children}</span>
+      <span className="btn-label" style={{ color: "black" }}>
+        {children}
+      </span>
     </button>
   );
 }

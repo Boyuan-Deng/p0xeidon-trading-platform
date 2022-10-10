@@ -57,7 +57,7 @@ function fillGaps(prices, periodSeconds) {
 }
 
 async function getChartPricesFromStats(chainId, symbol, period) {
-  if (["WBTC", "tkETH", "WAVAX"].includes(symbol)) {
+  if (["WBTC", "zkETH", "WAVAX"].includes(symbol)) {
     symbol = symbol.substr(1);
   } else if (symbol === "BTC.b") {
     symbol = "BTC";
@@ -159,7 +159,7 @@ function getCandlesFromPrices(prices, period) {
 }
 
 function getChainlinkChartPricesFromGraph(tokenSymbol, period) {
-  if (["WBTC", "tkETH", "WAVAX"].includes(tokenSymbol)) {
+  if (["WBTC", "zkETH", "WAVAX"].includes(tokenSymbol)) {
     tokenSymbol = tokenSymbol.substr(1);
   }
   const marketName = tokenSymbol + "_USD";

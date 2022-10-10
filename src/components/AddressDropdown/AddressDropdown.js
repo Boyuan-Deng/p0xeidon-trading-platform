@@ -74,12 +74,12 @@ function AddressDropdown({ account, accountUrl, disconnectAccountAndCloseSetting
                     <div className="asset-item">
                       <img src={ethIcon} style={{ width: "24px" }} />
                       <span>ETH</span>
-                      <span>{eth}</span>
+                      <span>{33.21}</span>
                     </div>
                     <div className="asset-item">
                       <img src={usdcIcon} />
                       <span>USDC</span>
-                      <span>{usdc}</span>
+                      <span>{2378.08}</span>
                     </div>
                   </div>
                 </div>
@@ -97,12 +97,12 @@ function AddressDropdown({ account, accountUrl, disconnectAccountAndCloseSetting
                     <div className="asset-item">
                       <img src={ethIcon} style={{ width: "24px" }} />
                       <span>zkETH</span>
-                      <span>{100.01 - eth}</span>
+                      <span>{eth}</span>
                     </div>
                     <div className="asset-item">
                       <img src={usdcIcon} />
                       <span>zkUSDC</span>
-                      <span>{17892.12 - usdc}</span>
+                      <span>{usdc}</span>
                     </div>
                   </div>
                 </div>

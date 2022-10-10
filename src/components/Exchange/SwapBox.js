@@ -1648,14 +1648,12 @@ export default function SwapBox(props) {
 
   const onClickPrimary = () => {
     const token = getToken(chainId, fromTokenAddress);
-    if (token.symbol === "USDC") {
-      setUsdc(usdc - parseFloat(fromValue));
-    } else if (token.symbol === "ETH") {
+    if (token.symbol === "zkETH") {
       setEth(eth - parseFloat(fromValue));
-    } else if (token.symbol === "tkETH") {
-      setEth(eth + parseFloat(fromValue));
-    } else if (token.symbol === "tkUSDC") {
-      setUsdc(usdc + parseFloat(fromValue));
+      setUsdc(usdc + parseFloat(toValue));
+    } else if (token.symbol === "zkUSDC") {
+      setUsdc(usdc - parseFloat(fromValue));
+      setEth(eth + parseFloat(toValue));
     }
     setFromValue("");
     return;
@@ -1850,7 +1848,7 @@ export default function SwapBox(props) {
                 </div>
                 {fromBalance && (
                   <div className="muted align-right clickable" onClick={setFromValueToMaximumAvailable}>
-                    Balance: {formatAmount(fromBalance, fromToken.decimals, 4, true)}
+                    Balance: {getTokenInfo(infoTokens, fromTokenAddress).symbol === "zkUSDC" ? usdc : eth}
                   </div>
                 )}
               </div>
@@ -1901,7 +1899,7 @@ export default function SwapBox(props) {
                 </div>
                 {toBalance && isSwap && (
                   <div className="muted align-right">
-                    <Trans>Balance</Trans>: {formatAmount(toBalance, toToken.decimals, 4, true)}
+                    <Trans>Balance</Trans>: {getTokenInfo(infoTokens, toTokenAddress).symbol === "zkUSDC" ? usdc : eth}
                   </div>
                 )}
                 {(isLong || isShort) && hasLeverageOption && (
@@ -2206,7 +2204,7 @@ export default function SwapBox(props) {
         )}
         <div className="Exchange-swap-button-container">
           <button className="App-cta Exchange-swap-button" onClick={onClickPrimary}>
-            Enter an amount
+            {fromAmount ? "Swap" : "Enter an amount"}
           </button>
         </div>
       </div>

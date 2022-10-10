@@ -49,9 +49,9 @@ export default function TokenSelector(props) {
   }
 
   let tokenImage;
-  if (tokenInfo.symbol === "tkETH") {
+  if (tokenInfo.symbol === "zkETH") {
     tokenImage = importImage(`icon-eth.svg`);
-  } else if (tokenInfo.symbol === "tkUSDC") {
+  } else if (tokenInfo.symbol === "zkUSDC") {
     tokenImage = importImage(`ic_usdc_24.svg`);
   } else {
     tokenImage = importImage(`ic_${tokenInfo.symbol.toLowerCase()}_24.svg`);
@@ -96,9 +96,9 @@ export default function TokenSelector(props) {
           </div>
           {filteredTokens.map((token, tokenIndex) => {
             let tokenPopupImage;
-            if (token.symbol === "tkETH") {
+            if (token.symbol === "zkETH") {
               tokenPopupImage = importImage(`icon-eth.svg`);
-            } else if (token.symbol === "tkUSDC") {
+            } else if (token.symbol === "zkUSDC") {
               tokenPopupImage = importImage(`ic_usdc_40.svg`);
             } else {
               tokenPopupImage = importImage(`ic_${token.symbol.toLowerCase()}_40.svg`);

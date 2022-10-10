@@ -5,24 +5,22 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
-  color: 	#000000;
+  color: #000000;
   font-size: 10px;
   background-color: #f8f9fa;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-  monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 * {
@@ -420,4 +418,9 @@ button.btn-link:hover .logout-icon {
 }
 .default-cursor.App-cta {
   cursor: default;
+}
+
+.public-trade {
+  margin-right: 1rem;
+  color: #5172df;
 }
